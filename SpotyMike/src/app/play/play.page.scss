@@ -1,0 +1,68 @@
+ion-content {
+    --background: linear-gradient(#7A6FF9 0%, #FFF 50%, #FFF 100%);
+  } 
+  
+  .music-player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  
+  .album-cover {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .album-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .song-info {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .song-info h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
+  
+  .song-info p {
+    font-size: 18px;
+    color: #666;
+  }
+  
+  .controls {
+    margin-top: 20px;
+  }
+  
+  .controls ion-button {
+
+    background-color: transparent;
+  }
+  
+  .controls ion-button ion-icon {
+    font-size: 36px;
+  }
+  
+  .lyrics {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    max-width: 80%;
+    overflow-y: auto;
+  }
+  
+  .lyrics p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  

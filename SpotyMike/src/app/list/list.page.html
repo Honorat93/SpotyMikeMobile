@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Playlist
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let artist of artists">
+      <ion-label>
+        <h2>{{ artist.name }}</h2>
+        <p>Number of songs: {{ artist.songs.length }}</p>
+        <ion-list>
+          <ion-item *ngFor="let song of artist.songs; let i = index">
+            {{ i + 1 }}. {{ song }}
+          </ion-item>
+        </ion-list>
+      </ion-label>
+      <ion-buttons slot="end">
+       
+        <ion-button color="danger" (click)="likeArtist(artist)">
+          <ion-icon slot="icon-only" name="heart-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+  </ion-list>
+</ion-content>

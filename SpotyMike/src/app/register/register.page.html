@@ -1,0 +1,56 @@
+<ion-content class="page-container">
+  <div class="logo">
+    <img src="assets/image/Logo spotyMike.png" alt="Logo SpotyMike">
+  </div>
+
+  <div class="login-container">
+    <form action="">
+      
+      <div class="form-group">
+        <label for="fullname">Fullname</label>
+        <ion-input type="name" id="fullname" name="fullname" required></ion-input>
+      </div>
+
+      <div class="form-group">
+        <label for="lastname">Lastname</label>
+        <ion-input type="name" id="lastname" name="lastname" required></ion-input>
+      </div>
+
+      <div class="form-group">
+        <label for="datebirth">DateBirth</label>
+        <ion-input type="date" id="datebirth" name="datebirth" required></ion-input>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Sexe</label>
+        <ion-list>
+          <ion-item>
+            <ion-select aria-label="Sexe" interface="action-sheet" placeholder="Select sexe">
+              <ion-select-option value="female">Female</ion-select-option>
+              <ion-select-option value="male">Male</ion-select-option>
+              <ion-select-option value="other">Other</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <ion-input type="email" id="email" name="email" required></ion-input>
+      </div>
+
+      <div class="form-group">
+        <label for="telephone">Telephone</label>
+        <ion-input type="number" id="telephone" name="telephone" required></ion-input>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <ion-input type="password" id="password" name="password" required></ion-input>
+      </div>
+
+      <ion-button color="primary">Register</ion-button>
+
+    </form>
+  </div>
+</ion-content>
