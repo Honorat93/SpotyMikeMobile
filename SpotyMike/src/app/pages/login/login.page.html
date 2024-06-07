@@ -1,0 +1,59 @@
+
+<ion-content class="page-container">
+  <div class="logo">
+    <img src="assets/image/Logo spotyMike.png" alt="Logo SpotyMike">
+  </div>
+
+  <div class="login-container">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" >
+      
+      <div class="form-group">
+        <ion-label for="email">Email</ion-label>
+        <ion-input type="email" formControlName="email" placeholder="mike@.mike.mike" id="emai"></ion-input>
+      </div>
+
+      @if (loginForm.get('email')?.invalid &&  loginForm.get('email')?.touched){
+        <div>
+          @if (loginForm.get('email')?.errors?.['required']) {
+            <p class="error"><ion-icon name="alert-outline"></ion-icon> L'email est requis</p>
+          }
+          @else if (loginForm.get('email')?.errors?.['required']) {
+            <p class="error"><ion-icon name="alert-outline"></ion-icon>Email invalide</p>
+          }
+        </div>
+      }
+      <div style="margin-top: 20px;"></div>
+      
+      <div class="form-group">
+        <ion-label for="password">Password</ion-label>
+        <ion-input [type] = "passwordVisible ? 'text' : 'password' " formControlName="password" placeholder="................." id="password">
+        <ion-icon  [name]="passwordVisible ? 'eye' : 'eye-off'"     slot="end"  (click)="togglePasswordVisibility()"></ion-icon>
+        </ion-input>
+      </div>
+
+      @if (loginForm.get('password')?.invalid && loginForm.get('password')?.dirty || loginForm.get('password')?.touched) {
+        <div>
+          @if (loginForm.get('password')?.errors?.['required']) {
+            <p class="error"><ion-icon name="alert-outline"></ion-icon>Le mot de passe est requis</p>
+          }
+          @else if (loginForm.get('password')?.errors?.['pattern']) {
+            <p class="error"><ion-icon name="alert-outline"></ion-icon>Le format du mot de passe est invalide</p>
+          }
+          @else if (loginForm.get('password')?.errors?.['minLength']) {
+            <p class="error"><ion-icon name="alert-outline"></ion-icon>La longueur du mot de passe est invalide</p>
+          }
+        </div>
+      }
+      <ion-button color="primary" type="submit" [disabled]="loginForm.invalid && !submitForm">Connection</ion-button>
+
+      <div class="password-lost-link">
+        <a (click)="onPasswordLost()">Mot de passe oublier</a>
+      </div>
+
+      <div class="register-link">
+        <a href="/register">Pas encore inscrit ?</a>
+      </div>  
+    </form>
+  </div>
+</ion-content>
+

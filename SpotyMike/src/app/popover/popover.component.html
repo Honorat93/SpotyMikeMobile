@@ -1,0 +1,10 @@
+<ion-list>
+  <ion-item button (click)="toggleFavorite()">
+    <ion-icon [name]="isFavorite ? 'heart' : 'heart-outline'" [color]="isFavorite ? 'danger' : 'black'" class="custom-icon"></ion-icon>
+    <ion-label class="custom-label">Favorite</ion-label>
+  </ion-item>
+  <ion-item button (click)="toggleDelete()">
+    <ion-icon name="trash-outline" slot="start" class="custom-icon"></ion-icon>
+    <ion-label class="custom-label">Delete</ion-label>
+  </ion-item>
+</ion-list>

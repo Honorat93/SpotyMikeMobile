@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-title>Music playlist</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="entete">
+    <ion-icon name="chevron-back-outline" class="back-button"></ion-icon>
+    <p>Music playlist</p>
+    <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+  </div>
+
+
+  <ion-list>
+    @for (song of songs; track $index) {
+      <div><img src={{song.cover}}></div>
+      <div> <span>{{song.title}}</span> <br>{{song.artist}}</div>
+      <div><ion-icon name="ellipsis-vertical-outline" class="vertical"></ion-icon></div>
+    }
+    @empty {
+      <p>Aucune chanson disponible</p>
+    }
+  </ion-list>
+  
+</ion-content>

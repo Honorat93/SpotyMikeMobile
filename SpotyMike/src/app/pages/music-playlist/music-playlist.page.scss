@@ -1,0 +1,39 @@
+.entete {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+  }
+
+p{
+    margin: auto;
+}
+
+img{
+    max-width: 100px;
+}
+
+  
+  .back-button {
+    font-size: 24px;
+  }
+
+  ion-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+
+  span{
+    font-weight: bold;
+  }
+
+  .vertical{
+    margin-left: 260px;
+  }
+
+
+  
+  

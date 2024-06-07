@@ -1,0 +1,159 @@
+.container {
+  padding: 20px;
+}
+
+span.Dusty { 
+  font-weight: bold;
+  color: black;
+}
+
+span {
+  color: #B7B7B7;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header img {
+  border-radius: 50%;
+}
+
+.search {
+  font-size: 24px;
+  color: black;
+}
+
+.new-album-card {
+  display: flex;
+  align-items: center;
+  border-radius: 50px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.new-album-card img {
+  width: 100%; 
+  height: auto;
+}
+
+.song-info p {
+  white-space: nowrap;
+}
+
+.music-genres div {
+  display: flex;
+  flex-grow: 1;
+}
+
+.music-genres, .top-songs, .last-played {
+  margin: 20px 0;
+}
+
+.music-genres .header, .top-songs .header, .last-played .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.last-played .songs-list, .top-songs .songs-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.last-played .songs-list div, .top-songs .songs-list div {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.song-info {
+  margin-left: 10px;
+}
+
+.last-played .time-options {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.last-played .options {
+  margin-left: 10px;
+}
+
+.last-played img, .top-songs img {
+  border-radius: 10px;
+  width: 60px;
+}
+
+.music-genres .genres-buttons {
+  display: flex;
+  flex-grow: 1;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.genre-button {
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+.genre-button.selected {
+  background-color: #15AB90;
+  color: white;
+}
+
+.top-songs .header img {
+  width: 80px;
+  height: 80px;
+}
+
+.top-songs .songs-list {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.top-songs .songs-list div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  margin-right: 20px;
+}
+
+.top-songs .songs-list div:last-child {
+  margin-right: 0;
+}
+
+.top-songs .songs-list p {
+  text-align: center;
+}
+
+.top-songs .songs-list img {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 115px;
+  height: 100px;
+  cursor: pointer;
+}
+
+.see-all {
+  color: #15AB90;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+}
