@@ -1,0 +1,71 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Music App</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="container">
+        <div class="header">
+            <a href="/tabs/profile">
+                <img src="assets/image/Booba.png" alt="User Icon" width="40">
+            </a>
+            <a href="/tabs/profile">
+                <ion-icon name="search-outline" class="search" style="float: right;" color=""></ion-icon>
+            </a>
+        </div>
+        <div class="new-album-card">
+            <img src="assets/image/Card Promo.svg" alt="card promo">
+        </div>
+        <div class="music-genres">
+            <div class="header">
+                <h3>Music Genres</h3>
+                <a href="/tabs/see-all" class="see-all">See All</a>
+            </div>
+            <div class="genres-buttons">
+                <div class="genre-button" [class.selected]="selectedGenre === 'all'" (click)="selectedGenre = 'all'" data-genre="all">All</div>
+                <div class="genre-button" [class.selected]="selectedGenre === 'rnb'" (click)="selectedGenre = 'rnb'" data-genre="rnb">R&B</div>
+                <div class="genre-button" [class.selected]="selectedGenre === 'pop'" (click)="selectedGenre = 'pop'" data-genre="pop">Pop</div>
+                <div class="genre-button" [class.selected]="selectedGenre === 'rock'" (click)="selectedGenre = 'rock'" data-genre="rock">Rock</div>
+            </div>
+        </div>
+        <div class="top-songs">
+            <div class="header">
+                <h3>Top Songs</h3>
+                <a href="/tabs/see-all" class="see-all">See All</a>
+            </div>
+            <div class="songs-list">
+                <div>
+                    <img src="assets/image/pnl.png" alt="Song 1">
+                    <p>Amelia Cantata <br> <span>Starry Skies</span></p>
+                </div>
+                <div>
+                    <img src="assets/image/pnl.png" alt="Song 2">
+                    <p>Olivia Lyric <br> <span>Sunset Serenit</span></p>
+                </div>
+                <div>
+                    <img src="assets/image/pnl.png" alt="Song 3">
+                    <p>Mason Chorus <br> <span>Eternal Sunset</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="last-played">
+            <div class="header">
+                <h3>Last Played</h3>
+                <a href="/tabs/see-all" class="see-all">See All</a>
+            </div>
+            <div class="songs-list">
+                <div>
+                    <img src="assets/image/Booba.png" alt="Last Played" width="80">
+                    <div class="song-info">
+                        <p> <span class="Dusty">Dusty Roads</span> <br> Jakob Press</p>
+                    </div>
+                    <div class="time-options">
+                        <p>5:33</p>
+                        <ion-icon name="ellipsis-horizontal-outline" class="options" (click)="presentPopover($event)"></ion-icon>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ion-content>
