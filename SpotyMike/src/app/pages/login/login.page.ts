@@ -52,7 +52,7 @@ export class LoginPage implements OnInit {
             console.log('Login success:', success);
             if (success) {
               console.log('Redirection vers home');
-              this.router.navigateByUrl('/home');
+              this.router.navigateByUrl('/tabs/home');
             } else {
               this.errorMessage = 'Adresse email ou mot de passe incorrect.';
             }
