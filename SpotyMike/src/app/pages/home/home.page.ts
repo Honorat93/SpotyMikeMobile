@@ -20,7 +20,7 @@ export class HomePage {
 
   private popoverController = inject(PopoverController);
 
-  async presentPopover(ev: MouseEvent){
+  async presentPopover(ev: MouseEvent | TouchEvent){
     const popover = await this.popoverController.create({
       component: PopoverComponent,
       event: ev,
