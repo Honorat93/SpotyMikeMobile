@@ -26,6 +26,7 @@ export class HomePage {
       event: ev,
       translucent: true,
     })
+    console.log('popover affiche');
     return await popover.present();
   }
 
