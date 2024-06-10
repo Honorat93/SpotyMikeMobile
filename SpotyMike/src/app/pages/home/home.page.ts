@@ -21,6 +21,7 @@ export class HomePage {
   private popoverController = inject(PopoverController);
 
   async presentPopover(ev: any){
+    console.log('Boutton cliqué', ev);
     const popover = await this.popoverController.create({
       component: PopoverComponent,
       event: ev,
