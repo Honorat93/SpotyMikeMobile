@@ -20,16 +20,23 @@ export class HomePage {
 
   private popoverController = inject(PopoverController);
 
-  async presentPopover(ev: any){
-    console.log('Boutton cliqué', ev);
-    const popover = await this.popoverController.create({
-      component: PopoverComponent,
-      event: ev,
-      translucent: true,
-    })
-    console.log('popover affiché');
-    return await popover.present();
-  }
+  async presentPopover(ev: any) {
+    console.log('Boutton cliqu&', ev); 
 
-  
+    try {
+      const popover = await this.popoverController.create({
+        component: PopoverComponent,
+        event: ev,
+        translucent: true
+      });
+
+      console.log('Popover crée:', popover); 
+
+      await popover.present();
+      console.log('Popover affiché'); 
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  }
 }
+
