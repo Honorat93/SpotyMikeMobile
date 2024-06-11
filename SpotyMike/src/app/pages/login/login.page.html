@@ -46,9 +46,7 @@
       }
       <ion-button color="primary" type="submit" [disabled]="loginForm.invalid && !submitForm">Connection</ion-button>
 
-      <div class="password-lost-link">
-        <a (click)="onPasswordLost()">Mot de passe oublier</a>
-      </div>
+      <div tappable class="password-lost-link"  (click)="onPasswordLost()"> Mot de passe oublier</div>
 
       <div class="register-link">
         <a href="/register">Pas encore inscrit ?</a>

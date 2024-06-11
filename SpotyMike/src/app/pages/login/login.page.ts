@@ -70,6 +70,7 @@ export class LoginPage implements OnInit {
   }
 
   async onPasswordLost() {
+    console.log('modal cliqué')
     const modal = await this.modalController.create({
       component: PasswordResetComponent
     });
