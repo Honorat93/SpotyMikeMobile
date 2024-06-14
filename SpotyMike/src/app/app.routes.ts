@@ -15,6 +15,10 @@ export const routes: Routes = [
   {
     path: 'reset',
     loadComponent: () => import('./reset/reset.component').then( m => m.ResetComponent)
+  },  {
+    path: 'search',
+    loadComponent: () => import('./search/search.page').then( m => m.SearchPage)
   },
+
 
 ];

@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Search</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar placeholder="Artists, songs or album"></ion-searchbar>
+
+  <div class="search-categories">
+    <ion-card color="primary">
+      <ion-card-content class="song-card">
+        <h2>Song</h2>
+      </ion-card-content>
+    </ion-card>
+    <ion-card color="secondary">
+      <ion-card-content class="artist-card">
+        <h2>Artists</h2>
+      </ion-card-content>
+    </ion-card>
+    <ion-card color="tertiary">
+      <ion-card-content class="album-card">
+        <h2>Albums</h2>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="home">
+      <ion-icon name="home-outline"></ion-icon>
+      <ion-label>Home</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="search">
+      <ion-icon name="search-outline"></ion-icon>
+      <ion-label>Search</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="library">
+      <ion-icon name="library-outline"></ion-icon>
+      <ion-label>Library</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="profile">
+      <ion-icon name="person-outline"></ion-icon>
+      <ion-label>Profile</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>
+

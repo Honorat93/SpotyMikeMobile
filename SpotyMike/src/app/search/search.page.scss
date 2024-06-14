@@ -1,0 +1,38 @@
+ion-content {
+    --background: #fff;
+  }
+  
+  .search-categories {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+  }
+  
+  ion-card {
+    margin-bottom: 16px;
+    --border-radius: 8px;
+  }
+  
+  .song-card {
+    background-color: #201bb0; 
+  }
+  
+  .artist-card {
+    background-color: #00c4cc;
+  }
+  
+  .album-card {
+    background-color: #44b785; 
+  }
+  
+  .card-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
