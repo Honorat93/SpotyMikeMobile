@@ -1,17 +1,17 @@
-import { Component, OnInit,inject } from '@angular/core';
-import { FormBuilder, FormGroup, FormsModule } from '@angular/forms';
-import {IonicModule, ModalController } from '@ionic/angular';
+import { Component, OnInit,inject, ViewChild } from '@angular/core';
+import { FormBuilder, FormGroup, FormsModule, NgModel } from '@angular/forms';
+import { ModalController } from '@ionic/angular';
 import { Validators } from '@angular/forms';
-import {IonHeader,IonToolbar,IonButtons,IonButton, IonTitle,IonContent,IonInput,IonItem} from '@ionic/angular/standalone';
+import {IonHeader,IonToolbar,IonButtons,IonButton, IonTitle,IonContent,IonInput,IonItem, IonModal } from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-password-reset',
   templateUrl: './password-reset.component.html',
   styleUrls: ['./password-reset.component.scss'],
   standalone: true,
-  imports: [IonItem,IonInput,IonContent,IonTitle,IonButton,IonButtons,IonToolbar,IonHeader,],
+  imports: [ IonItem,IonInput,IonContent,IonTitle,IonButton,IonButtons,IonToolbar,IonHeader, FormsModule,],
 })
-export class PasswordResetComponent  implements OnInit {
+export class PasswordResetComponent  implements OnInit { 
 
   private formBuilder = inject(FormBuilder);
   private modalController = inject(ModalController)
@@ -20,17 +20,25 @@ export class PasswordResetComponent  implements OnInit {
 
   constructor() { }
 
+  email: string = '';
   ngOnInit() {
     this.resetPasswordForm = this.formBuilder.group({
       email: ['', [Validators.required, Validators.pattern('^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$')]]
     })
   }
 
-  async cancel()
-  {
-    await this.modalController.dismiss();
+   async cancel() {
+    await this.modalController.dismiss(null, 'cancel');
+  }
+
+  async confirm() {
+    await this.modalController.dismiss(this.email, 'confirm');
   }
 
 
-
 }
+
+
+
+
+

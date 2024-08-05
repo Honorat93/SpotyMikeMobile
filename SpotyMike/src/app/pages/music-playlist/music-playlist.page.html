@@ -12,10 +12,14 @@
   </div>
 
 
-  <ion-list>
+  <ion-list class="list">
     @for (song of songs; track $index) {
       <div><img src={{song.cover}}></div>
-      <div> <span>{{song.title}}</span> <br>{{song.artist}}</div>
+      <div class="details">
+        <span class="bold">{{song.title}}</span>
+        <br>
+        <span class="artist-name">{{song.artist}}</span>
+      </div>
       <div><ion-icon name="ellipsis-vertical-outline" class="vertical"></ion-icon></div>
     }
     @empty {

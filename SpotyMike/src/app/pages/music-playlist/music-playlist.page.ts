@@ -6,6 +6,7 @@ import { addIcons } from 'ionicons';
 import { chevronBackOutline, ellipsisHorizontalOutline, ellipsisVerticalOutline } from 'ionicons/icons';
 import { MusicService } from 'src/app/services/music.service';
 import { Song } from 'src/app/interface/song';
+import { catchError, throwError } from 'rxjs';
 
 @Component({
   selector: 'app-music-playlist',
@@ -23,10 +24,13 @@ export class MusicPlaylistPage implements OnInit {
 
 
   ngOnInit() {
-    this.musicService.getSongs().subscribe(data => {
+    this.musicService.getSongs().pipe(
+      catchError(error => {
+        console.error('Erreur lors de la récupération des chansons : ', error);
+        return throwError(() => error);
+      })
+    ).subscribe(data => {
       this.songs = data;
-    }, error => {
-      console.error('Erreur lors de la récupération des chansons : ', error);
     });
   }
 }
